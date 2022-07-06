@@ -1,0 +1,348 @@
+@media screen and (min-width: 576px) {
+  .main .main__intro {
+    padding-bottom: 11em;
+  }
+  .main .main__intro .intro__container .content__header {
+    margin-top: 4em;
+    font-size: 2em;
+  }
+  .main .main__intro .intro__container .content__paragraph {
+    font-size: 2em;
+  }
+  .main .main__articles {
+    padding-bottom: 9em;
+  }
+  .main .main__articles .articles__container .articles__header {
+    font-size: 2em;
+  }
+  .main .main__recipes-page {
+    padding-bottom: 4em;
+  }
+  .main .main__recipes-page .recipes-page__container .recipes-page__header {
+    font-size: 2em;
+  }
+  .main .main__recipe {
+    padding-bottom: 4em;
+  }
+  .main .main__recipe .recipe__container .recipe__header {
+    font-size: 2em;
+  }
+  .main .main__register {
+    padding-bottom: 4em;
+  }
+  .main .main__register .register__container .register__header {
+    font-size: 2em;
+  }
+
+  .recipes-page__list .recipes-page__item {
+    width: 175px;
+    height: 175px;
+  }
+  .recipes-page__list .recipes-page__item .item__header {
+    margin-top: 7em;
+  }
+
+  .main__login {
+    padding-bottom: 4em;
+  }
+  .main__login .login__container .login__header {
+    font-size: 2em;
+  }
+
+  .social img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .form__body {
+    font-size: 1.15em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header .nav {
+    align-items: center;
+    padding: 1.2em;
+  }
+  .header .nav .nav__block {
+    width: auto;
+  }
+  .header .nav .nav__block .nav__toggler {
+    display: none;
+  }
+  .header .nav .nav__block .nav__list {
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+  .header .nav .nav__block .nav__list.false {
+    height: auto;
+  }
+  .header .nav .nav__block .nav__list_folded {
+    height: auto;
+  }
+  .header .nav .nav__block .nav__list .nav__item {
+    margin: 0;
+  }
+  .header .nav .nav__block .nav__list .nav__item:not(:first-of-type) {
+    margin-left: 1.5rem;
+  }
+
+  .recipes-page__list {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2em;
+  }
+  .recipes-page__list .recipes-page__item {
+    width: 225px;
+    height: 225px;
+  }
+  .recipes-page__list .recipes-page__item .item__header {
+    margin-top: 8em;
+    font-size: 1.25em;
+  }
+
+  .add-recipe .add-recipe__btn {
+    width: 75px;
+    height: 75px;
+  }
+  .add-recipe .add-recipe__btn span {
+    width: 40px;
+    margin-left: -19.5px;
+  }
+
+  .main .main__intro {
+    padding-bottom: 12em;
+  }
+  .main .main__intro .intro__container .content__header {
+    margin-top: 5em;
+    font-size: 2.5em;
+  }
+  .main .main__intro .intro__container .content__paragraph {
+    font-size: 2.5em;
+  }
+  .main .main__articles {
+    padding-bottom: 12em;
+  }
+  .main .main__articles .articles__container .articles__header {
+    font-size: 2.5em;
+  }
+  .main .main__articles .articles__container .articles__wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  .main .main__recipe {
+    padding-bottom: 6em;
+  }
+  .main .main__recipe .recipe__container .recipe__header {
+    font-size: 2.5em;
+  }
+  .main .main__register {
+    padding-bottom: 6em;
+  }
+  .main .main__register .register__container .register__header {
+    font-size: 2.5em;
+  }
+  .main .main__login {
+    padding-bottom: 6em;
+  }
+  .main .main__login .login__container .login__header {
+    font-size: 2.5em;
+  }
+  .main .main__recipes-page {
+    padding-bottom: 6em;
+  }
+  .main .main__recipes-page .recipes-page__container .recipes-page__header {
+    font-size: 2.5em;
+  }
+  .main .main__login {
+    padding-bottom: 6em;
+  }
+  .main .main__login .login__container .login__header {
+    font-size: 2.5em;
+  }
+
+  .footer .footer__container .footer__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form__body {
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header .nav {
+    padding: 1.2em 0;
+    max-width: 992px;
+    margin: 0 auto;
+  }
+  .header .nav .nav__item {
+    font-size: 1.1rem;
+  }
+
+  .add-recipe .add-recipe__btn {
+    width: 95px;
+    height: 95px;
+  }
+  .add-recipe .add-recipe__btn span {
+    width: 50px;
+    margin-left: -23.5px;
+  }
+  .add-recipe .add-recipe__text {
+    font-size: 1.5em;
+  }
+
+  .recipes-page__list {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2em;
+  }
+  .recipes-page__list .recipes-page__item {
+    width: 300px;
+    height: 300px;
+  }
+  .recipes-page__list .recipes-page__item .item__header {
+    margin-top: 8em;
+    font-size: 1.7em;
+  }
+
+  .main .main__intro {
+    padding-bottom: 13em;
+  }
+  .main .main__intro .intro__container .content__header {
+    margin-top: 3em;
+    font-size: 2.7em;
+  }
+  .main .main__intro .intro__container .content__paragraph {
+    font-size: 2.7em;
+  }
+  .main .main__articles {
+    padding-bottom: 15em;
+  }
+  .main .main__articles .articles__container .articles__header {
+    font-size: 2.7em;
+  }
+  .main .main__articles .articles__container .articles__wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .main .main__recipe {
+    padding-bottom: 6em;
+  }
+  .main .main__recipe .recipe__container .recipe__header {
+    font-size: 2.7em;
+  }
+  .main .main__register {
+    padding-bottom: 6em;
+  }
+  .main .main__register .register__container .register__header {
+    font-size: 2.7em;
+  }
+  .main .main__recipes-page {
+    padding-bottom: 6em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+  }
+  .main .main__recipes-page .recipes-page__container .recipes-page__header {
+    font-size: 2.7em;
+  }
+  .main .main__login {
+    padding-bottom: 6em;
+  }
+  .main .main__login .login__container .login__header {
+    font-size: 2.7em;
+  }
+
+  .container {
+    padding: 0;
+    max-width: 992px;
+    margin: 0 auto;
+  }
+
+  .form__body {
+    font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header .nav {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 1.2em 0;
+  }
+
+  .recipes-page__list {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2em;
+  }
+  .recipes-page__list .recipes-page__item {
+    width: 375px;
+    height: 375px;
+  }
+  .recipes-page__list .recipes-page__item .item__header {
+    margin-top: 8.5em;
+    font-size: 1.9em;
+  }
+
+  .add-recipe .add-recipe__btn {
+    width: 120px;
+    height: 120px;
+  }
+  .add-recipe .add-recipe__btn span {
+    width: 60px;
+    margin-left: -28.5px;
+  }
+  .add-recipe .add-recipe__text {
+    font-size: 2em;
+  }
+
+  .container {
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+
+  .form__body {
+    font-size: 1.4em;
+  }
+
+  .main .main__intro {
+    padding-bottom: 16em;
+  }
+  .main .main__intro .intro__container .content__header {
+    margin-top: 4em;
+    font-size: 2.9em;
+  }
+  .main .main__intro .intro__container .content__paragraph {
+    font-size: 2.9em;
+  }
+  .main .main__articles {
+    padding-bottom: 19em;
+  }
+  .main .main__articles .articles__container .articles__header {
+    font-size: 2.9em;
+  }
+  .main .main__register {
+    padding-bottom: 9em;
+  }
+  .main .main__register .register__container .register__header {
+    font-size: 2.9em;
+  }
+  .main .main__recipe {
+    padding-bottom: 9em;
+  }
+  .main .main__recipe .recipe__container .recipe__header {
+    font-size: 2.9em;
+  }
+  .main .main__recipes-page {
+    padding-bottom: 9em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+  }
+  .main .main__recipes-page .recipes-page__container .recipes-page__header {
+    font-size: 2.9em;
+  }
+  .main .main__login {
+    padding-bottom: 9em;
+  }
+  .main .main__login .login__container .login__header {
+    font-size: 2.9em;
+  }
+}/*# sourceMappingURL=Media.css.map */

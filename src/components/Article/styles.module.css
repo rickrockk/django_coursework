@@ -1,0 +1,34 @@
+.main__articles {
+  background-color: #20150F;
+  padding-top: 2em;
+  padding-bottom: 4em;
+}
+.main__articles .articles__container .articles__header {
+  color: #DFA583;
+}
+.main__articles .articles__container .articles__wrapper {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25em;
+}
+.main__articles .articles__container .articles__wrapper .article {
+  background: transparent;
+  border: 2px solid #DFA583;
+  padding: 1em 2em 2em;
+  color: white;
+  height: 6rem;
+  transition: 0.2s;
+}
+.main__articles .articles__container .articles__wrapper .article:hover {
+  color: #DFA583;
+}
+.main__articles .articles__container .articles__wrapper .article.add-article {
+  padding: 2em;
+}
+.main__articles .articles__container .articles__wrapper .article.add-article .add-article__title {
+  text-align: center;
+}
+.main__articles .articles__container .articles__wrapper .article .article__description {
+  margin-top: 1em;
+}/*# sourceMappingURL=styles.module.css.map */

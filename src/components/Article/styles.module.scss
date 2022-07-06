@@ -1,0 +1,47 @@
+.main__articles {
+    background-color: #20150F;
+    padding-top: 2em;
+    padding-bottom: 4em;
+    .articles__container {
+        .articles__header {
+            color: #DFA583;
+        }
+
+        .articles__wrapper {
+            margin-top: 1em;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25em;
+            
+            
+            .article {
+                background: transparent;
+                border: 2px solid #DFA583;
+                padding: 1em 2em 2em;
+                color: white;
+                height: 6rem;
+                transition: .2s;
+
+                &:hover {
+                    color: #DFA583;
+                }
+
+                &.add-article {
+                    padding: 2em;
+
+                    .add-article__title {
+                        text-align: center;
+                    }
+                }
+
+                .article__name {
+                    
+                }
+
+                .article__description {
+                    margin-top: 1em;
+                }
+            }
+        }
+    }
+}
