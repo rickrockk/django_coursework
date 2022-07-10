@@ -6,11 +6,13 @@ from recipes.views import RecipeViewSet
 from authentification.views import UserViewSet
 from foodTypes.views import FoodTypeViewset
 from recipeTypes.views import RecipeTypeViewset
+from articles.views import ArticleViewSet
 
 router = DefaultRouter()
 simrouter = SimpleRouter()
 
 router.register('recipes', RecipeViewSet)
+router.register('articles', ArticleViewSet)
 router.register('articles_comments', ArticleCommentViewSet)
 router.register('recipes_comments', RecipeCommentViewSet)
 router.register('ingredients', IngredientViewSet)
