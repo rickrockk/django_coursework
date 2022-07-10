@@ -232,7 +232,7 @@ a {
 .main .main__articles .articles__container .articles__wrapper .article {
   background: transparent;
   border: 2px solid #DFA583;
-  padding: 1em 2em 2em;
+  padding: 1em 2em 3em;
   color: white;
   height: 6rem;
   transition: 0.2s;

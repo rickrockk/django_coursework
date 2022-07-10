@@ -17,11 +17,58 @@
             }
         }
 
+        .main__about {
+            padding-bottom: 11em;
+    
+            .about__container {
+                .about__header {
+                    font-size: 2em;
+                }
+                .about__content {
+                    font-size: 1.3em;
+
+                    .about__img {
+                        width: 350px;
+                    }
+                }
+            }
+        }
+
         .main__articles {
             padding-bottom: 9em;
             .articles__container {
                 .articles__header {
                     font-size: 2em
+                }
+            }
+        }
+
+        .main__article {
+            padding-bottom: 9em;
+            .article__container {
+                .article__header {
+                    font-size: 2em;
+                }
+                .article__text {
+                    font-size: 1.3em;
+                }
+            }
+        }
+
+        .main__article-form {
+            padding-bottom: 4em;
+            .article-form__container {
+                .article-form__header {
+                    font-size: 2em;
+                }
+            }
+        }
+
+        .main__recipe-form {
+            padding-bottom: 4em;
+            .recipe-form__container {
+                .recipe-form__header {
+                    font-size: 2em;
                 }
             }
         }
@@ -173,6 +220,24 @@
             }
         }
 
+        .main__about {
+            padding-bottom: 12em;
+    
+            .about__container {
+                .about__header {
+                    font-size: 2.5em;
+                }
+                .about__content {
+                    font-size: 1.5em;
+                    grid-template-columns: 2fr 1fr;
+
+                    .about__img {
+                        width: 375px;
+                    }
+                }
+            }
+        }
+
         .main__articles {
             padding-bottom: 12em;
             .articles__container {
@@ -182,6 +247,36 @@
 
                 .articles__wrapper {
                     grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+
+        .main__article {
+            padding-bottom: 12em;
+            .article__container {
+                .article__header {
+                    font-size: 2.5em;
+                }
+                .article__text {
+                    font-size: 1.5em;
+                }
+            }
+        }
+
+        .main__article-form {
+            padding-bottom: 5em;
+            .article-form__container {
+                .article-form__header {
+                    font-size: 2.5em;
+                }
+            }
+        }
+
+        .main__recipe-form {
+            padding-bottom: 5em;
+            .recipe-form__container {
+                .recipe-form__header {
+                    font-size: 2.5em;
                 }
             }
         }
@@ -328,6 +423,52 @@
             }
         }
 
+        .main__about {
+            padding-bottom: 15em;
+    
+            .about__container {
+                .about__header {
+                    font-size: 2.7em;
+                }
+                .about__content {
+                    font-size: 1.6em;
+                    .about__img {
+                        width: 425px;
+                    }
+                }
+            }
+        }
+
+        .main__article-form {
+            padding-bottom: 6em;
+            .article-form__container {
+                .article-form__header {
+                    font-size: 2.7em;
+                }
+            }
+        }
+
+        .main__recipe-form {
+            padding-bottom: 6em;
+            .recipe-form__container {
+                .recipe-form__header {
+                    font-size: 2.7em;
+                }
+            }
+        }
+
+        .main__article {
+            padding-bottom: 15em;
+            .article__container {
+                .article__header {
+                    font-size: 2.7em;
+                }
+                .article__text {
+                    font-size: 1.6em;
+                }
+            }
+        }
+
         .main__recipe {
             padding-bottom: 6em;
             .recipe__container {
@@ -454,6 +595,53 @@
             .articles__container {
                 .articles__header {
                     font-size: 2.9em
+                }
+            }
+        }
+
+        .main__article-form {
+            padding-bottom: 7em;
+            .article-form__container {
+                .article-form__header {
+                    font-size: 2.9em;
+                }
+            }
+        }
+
+        .main__recipe-form {
+            padding-bottom: 7em;
+            .recipe-form__container {
+                .recipe-form__header {
+                    font-size: 2.9em;
+                }
+            }
+        }
+
+        .main__article {
+            padding-bottom: 19em;
+            .article__container {
+                .article__header {
+                    font-size: 2.9em;
+                }
+                .article__text {
+                    font-size: 1.9em;
+                }
+            }
+        }
+
+        .main__about {
+            padding-bottom: 19em;
+    
+            .about__container {
+                .about__header {
+                    font-size: 2.9em;
+                }
+                .about__content {
+                    font-size: 1.9em;
+
+                    .about__img {
+                        width: 550px;
+                    }
                 }
             }
         }

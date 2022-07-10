@@ -1,9 +1,9 @@
 import React from "react";
 
-const Article = ({heading, description}) => {
+const Article = ({name, description}) => {
     return <div className="article">
     <h3 className="article__name">
-        {heading}
+        {name}
     </h3>
     <p className="article__description">
         {description}

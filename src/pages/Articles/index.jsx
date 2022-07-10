@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Article } from "../../components";
 
-const Articles = () => {
-    const ArticlesList = [{heading: 'Статья', description: 'Описание'}]
+const Articles = ({articles}) => {
+    // const ArticlesList = [{heading: 'Статья', description: 'Описание'}]
     return <main className='main'>
     <section className="main__articles">
         <div className="articles__container container">
@@ -18,7 +18,7 @@ const Articles = () => {
                         </h3>
                     </div>
                 </Link>
-                {ArticlesList.map((article) => <Link to="/article" className="article__link"><Article heading={article.heading} description={article.description}/></Link>)}
+                {articles.map((article) => <Link to='/article'><Article name={article.title} description={article.description}></Article></Link>)}
             </div>
         </div>
     </section>

@@ -27,7 +27,7 @@ const RecipesCath = ({cathegory, recipeItems}) => {
                         
                     </li>
                 </Link>
-                {recipeItems.map((recipe) => <Link to='/recipe'><RecipeItem heading={recipe.name} img={recipe.photo}/></Link> )}
+                {recipeItems.map((recipe) => <Link to='/recipe/'><RecipeItem heading={recipe.name} img={recipe.photo}/></Link> )}
                 
             </ul>
         </div>
