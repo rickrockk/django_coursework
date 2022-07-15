@@ -18,7 +18,7 @@ const Articles = ({articles}) => {
                         </h3>
                     </div>
                 </Link>
-                {articles.map((article) => <Link to='/article'><Article name={article.title} description={article.description}></Article></Link>)}
+                {articles.map((article) => <Link to={`${article.id}`}><Article name={article.title} description={article.description}></Article></Link>)}
             </div>
         </div>
     </section>

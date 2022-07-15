@@ -1,14 +1,10 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-import { useRef, useState, useEffect, useContext } from "react";
-import AuthContext from "../../context/AuthProvider";
-
-import axios from '../../api/axios';
+import { useRef, useState, useEffect } from "react";
 const LOGIN_URL = 'http://127.0.0.1:8000/api/auth/login/';
 
 const Login = () => {
-    const { setAuth } = useContext(AuthContext);
     const emailRef = useRef()
     const errRef = useRef()
 

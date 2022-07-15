@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { RecipeItem } from "../../components";
-import { Link, useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
 
-const RecipesCath = ({cathegory, recipeItems}) => {
+const RecipesCath = ({cathegory, recipeItems, count}) => {
     return <main className="main">
     <section className="main__recipes-page">
         <div className="recipes-page__container container">
             <h2 className="recipes-page__header">
                 {cathegory}
             </h2>
+            <p className="recipes__count"> Количество: {count}</p>
             <ul className="recipes-page__list">
                 <Link className="add-recipe_link" to='/add-recipe'>
                     <li className="recipes-page__item add-recipe">
@@ -27,7 +27,7 @@ const RecipesCath = ({cathegory, recipeItems}) => {
                         
                     </li>
                 </Link>
-                {recipeItems.map((recipe) => <Link to={`${recipe.id}`}><RecipeItem heading={recipe.name} img={recipe.photo}/></Link> )}
+                {recipeItems.map((recipe) => <Link to={`${recipe.id}`}><RecipeItem heading={recipe.name} img={recipe.photo} id={recipe.id}/></Link> )}
             </ul>
         </div>
     </section>

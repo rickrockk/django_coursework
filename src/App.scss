@@ -213,6 +213,8 @@ a {
             .recipe__photo {
                 margin-top: 1em;
                 margin-bottom: 1em;
+                width: 250px;
+                height: 200px;
             }
 
             .recipe__ingredients {
@@ -231,6 +233,10 @@ a {
         .recipes-page__container {
             .recipes-page__header {
                 color: #DFA583;
+            }
+
+            .recipes__count {
+                color: white;
             }
         }
     }
