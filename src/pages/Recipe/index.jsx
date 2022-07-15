@@ -1,12 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const Recipe = () => {
 
+    const {id} = useParams();
+    const RECIPES_URL = `http://127.0.0.1:8000/api/recipes/${id}`
 
-    const RECIPES_URL = 'http://127.0.0.1:8000/api/recipes/'
-
-    const [items, setItems] = useState([]);
+    const [item, setItem] = useState({});
     const [fetchError, setFetchError] = useState(null)
 
     useEffect(() => {
@@ -16,7 +17,7 @@ const Recipe = () => {
                 if (!response.ok) throw Error('Ожидаемые данные не были получены')
                 const itemInfo = await response.json()
                 console.log(itemInfo);
-                setItems(itemInfo);
+                setItem(itemInfo);
                 setFetchError(null);
             } catch (err) {
                 setFetchError(err.message)
@@ -30,11 +31,11 @@ const Recipe = () => {
         <section className="main__recipe">
             <div className="recipe__container container">
                 <h1 className="recipe__header">
-                    {items.name}
+                    {item.name}
                 </h1>
                 <img src="./assets/images/салат.jpg" alt="салат" className="recipe__photo" width="150" height="150"/>
                 <p className="recipe__description">
-                    {items.description}
+                    {item.description}
                 </p>
                 <h2 className="recipe__header_two">
                     Ингредиенты
@@ -49,7 +50,7 @@ const Recipe = () => {
                     Готовка
                 </h2>
                 <p className="recipe__cooking">
-                    {items.cooking}
+                    {item.cooking}
                 </p>
                 <h2 className="recipe__header_two">
                     Комментарии

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { RecipeItem } from "../../components";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect } from "react";
 
 
@@ -27,8 +27,7 @@ const RecipesCath = ({cathegory, recipeItems}) => {
                         
                     </li>
                 </Link>
-                {recipeItems.map((recipe) => <Link to='/recipe/'><RecipeItem heading={recipe.name} img={recipe.photo}/></Link> )}
-                
+                {recipeItems.map((recipe) => <Link to={`${recipe.id}`}><RecipeItem heading={recipe.name} img={recipe.photo}/></Link> )}
             </ul>
         </div>
     </section>

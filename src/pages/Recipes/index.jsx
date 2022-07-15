@@ -2,10 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { RecipeItem } from "../../components";
 
-const Recipes = ({cathegory}) => {
-    const recipeItems = [{heading: 'Завтрак', to: '/breakfast', img: '/assets/images/breakfast.jpg'},
-    {heading: 'Обед', to: '/lunch', img: '/assets/images/lunch.jpg'}, 
-    {heading: 'Ужин', to: '/dinner', img: '/assets/images/dinner.jpg'}]
+const Recipes = ({cathegory, recipeItems}) => {
     return <main className="main">
     <section className="main__recipes-page">
         <div className="recipes-page__container container">

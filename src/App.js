@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {HashRouter, Routes, Route} from 'react-router-dom';
+import {HashRouter, Routes, Route, useParams} from 'react-router-dom';
 
 
 import {Article, Footer, Header} from './components/';
@@ -29,13 +29,16 @@ function App() {
 
   const [recipe, setRecipe] = useState({});
   const [article, setArticle] = useState({});
-
-  const [id, setId] = useState(1);
   
-  const RECIPE_URL = `http://127.0.0.1:8000/api/recipes/${id}`
-  const ARTICLE_URL = `http://127.0.0.1:8000/api/articles/${id}`
+  // const RECIPE_URL = `http://127.0.0.1:8000/api/recipes/${id}`
+  // const ARTICLE_URL = `http://127.0.0.1:8000/api/articles/${id}`
   
   const [fetchError, setFetchError] = useState(null)
+
+  const recipeItemsArr = [{heading: 'Завтрак', to: '/breakfast', img: '/assets/images/breakfast.jpg'},
+    {heading: 'Обед', to: '/lunch', img: '/assets/images/lunch.jpg'}, 
+    {heading: 'Ужин', to: '/dinner', img: '/assets/images/dinner.jpg'}]
+
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -71,55 +74,62 @@ useEffect(() => {
   (async () => await fetchArticles())();
 }, [])
 
-useEffect(() => {
-  const fetchItem = async () => {
-      try {
-          const response = await fetch(RECIPE_URL)
-          if (!response.ok) throw Error('Ожидаемые данные не были получены')
-          const listItem = await response.json()
-          console.log(listItem);
-          setRecipe(listItem);
-          setFetchError(null);
-      } catch (err) {
-          setFetchError(err.message)
-      }
-  }
+// useEffect(() => {
+//   const fetchItem = async () => {
+//       try {
+//           const response = await fetch(RECIPE_URL)
+//           if (!response.ok) throw Error('Ожидаемые данные не были получены')
+//           const listItem = await response.json()
+//           console.log(listItem);
+//           setRecipe(listItem);
+//           setFetchError(null);
+//       } catch (err) {
+//           setFetchError(err.message)
+//       }
+//   }
 
-  (async () => await fetchItem())();
-}, [])
+//   (async () => await fetchItem())();
+// }, [])
 
-useEffect(() => {
-  const fetchItem = async () => {
-      try {
-          const response = await fetch(ARTICLE_URL)
-          if (!response.ok) throw Error('Ожидаемые данные не были получены')
-          const listItem = await response.json()
-          console.log(listItem);
-          setRecipe(listItem);
-          setFetchError(null);
-      } catch (err) {
-          setFetchError(err.message)
-      }
-  }
+// useEffect(() => {
+//   const fetchItem = async () => {
+//       try {
+//           const response = await fetch(ARTICLE_URL)
+//           if (!response.ok) throw Error('Ожидаемые данные не были получены')
+//           const listItem = await response.json()
+//           console.log(listItem);
+//           setRecipe(listItem);
+//           setFetchError(null);
+//       } catch (err) {
+//           setFetchError(err.message)
+//       }
+//   }
 
-  (async () => await fetchItem())();
-}, [id])
+//   (async () => await fetchItem())();
+// }, [id])
 
 
   return <HashRouter>
     <Header user={user} setUser={setUser}/>
     <Routes>
       <Route path='/' element={<MainPage user={user}/>}/>
-      <Route path='/recipes' element={<Recipes user={user} cathegory='Рецепты'/>}/>
+      <Route path='/recipes' element={<Recipes user={user} cathegory='Рецепты' recipeItems={recipeItemsArr}/>}/>
       <Route path='/profile' element={<Profile user={user} setUser={setUser}/>}/>
       <Route path='/articles' element={<Articles user={user} articles={articles}/>}/>
-      <Route path='/breakfast' element={<RecipesCath user={user} setUser={setUser} cathegory='Завтрак' recipeItems={items.filter((item) => item.recipe_type[0] === 1)}/>}/>
-      <Route path='/lunch' element={<RecipesCath user={user} setUser={setUser} cathegory='Обед' recipeItems={items.filter((item) => item.recipe_type[0] === 2)}/>}/>
-      <Route path='/dinner' element={<RecipesCath user={user} setUser={setUser} cathegory='Ужин' recipeItems={items.filter((item) => item.recipe_type[0] === 3)}/>}/>
-      <Route path='/desserts' element={<RecipesCath user={user} setUser={setUser} cathegory='Десерты' recipeItems={items.filter((item) => item.recipe_type[0] === 4)}/>}/>
+      <Route path='/breakfast' element={<RecipesCath user={user} setUser={setUser} cathegory='Завтрак' recipeItems={items.filter((item) => item.recipe_type[0] === 1)}/>}> 
+        <Route path=':id' element={<Recipe/>}/>
+      </Route>
+      <Route path='/lunch' element={<RecipesCath user={user} setUser={setUser} cathegory='Обед' recipeItems={items.filter((item) => item.recipe_type[0] === 2)}/>}> 
+        <Route path=':id' element={<Recipe/>}/>
+      </Route>
+      <Route path='/dinner' element={<RecipesCath user={user} setUser={setUser} cathegory='Ужин' recipeItems={items.filter((item) => item.recipe_type[0] === 3)}/>}> 
+        <Route path=':id' element={<Recipe/>}/>
+      </Route>
+      <Route path='/desserts' element={<RecipesCath user={user} setUser={setUser} cathegory='Десерты' recipeItems={items.filter((item) => item.recipe_type[0] === 4)}/>}> 
+        <Route path=':id' element={<Recipe/>}/>
+      </Route>
       <Route path='/login' element={<Login user={user} setUser={setUser}/>}/>
       <Route path='/register' element={<Register user={user} setUser={setUser}/>}/>
-      <Route path='/recipe' element={<Recipe user={user} setUser={setUser}/>}/>
       <Route path='/add-recipe' element={<RecipeForm user={user} setUser={setUser}/>}/>
       <Route path='/add-article' element={<ArticleForm/>}/>
       <Route path='/article' element={<ArticlePage/>}/>
