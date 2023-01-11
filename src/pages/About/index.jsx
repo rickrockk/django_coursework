@@ -1,5 +1,4 @@
 import React from "react";
-import Button from '@mui/material/Button';
 
 const About = () => {
     return <main className="main">
@@ -16,7 +15,6 @@ const About = () => {
                     </p>
                     <img className="about__img" src='/assets/images/me.jpg' alt="Создатель" width='250' />
                 </div>
-                <Button variant="contained" onClick={() => window.open("https://github.com/rickrockk/django_coursework/tree/frontend", "_blank")}>Ссылка на Git</Button>
             </div>
         </section>
     </main>

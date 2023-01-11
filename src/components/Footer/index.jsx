@@ -26,6 +26,11 @@ const Footer = () => {
                         <a href="https://t.me/rickrockkk" target="_blank" rel="noopener noreferrer">
                             <img src="./assets/images/telegram.svg" alt="telegram"/>
                         </a>
+                    </li> 
+                    <li className="social">
+                        <a href="https://github.com/rickrockk/django_coursework/tree/frontend" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/images/github.svg" alt="github"/>
+                        </a>
                     </li>   
                 </ul>
             </li>
