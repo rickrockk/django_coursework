@@ -5,7 +5,7 @@ const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}/;
 const EMAIL_REGEX = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%?]).{8,24}$/;
 
-const REGISTER_URL = 'http://127.0.0.1:8000/api/auth/register/';
+const REGISTER_URL = 'http://rickrockk.pythonanywhere.com/api/auth/register/';
 
 const Register = () => {
     const userRef = useRef();

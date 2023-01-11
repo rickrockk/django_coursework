@@ -6,7 +6,7 @@ const ArticleForm = () => {
     const [description, setDescription] = useState('');
     const [text, setText] = useState('');
 
-    const ARTICLES_URL = ('http://127.0.0.1:8000/api/articles/')
+    const ARTICLES_URL = ('http://rickrockk.pythonanywhere.com/api/articles/')
 
     const handleSubmit = async (e) => {
         e.preventDefault()

@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Badge from '@mui/material/Badge';
+import MailIcon from '@mui/icons-material/Mail';
 
-const Header = () => {
+const Header = ({token}) => {
     const [isFolded, setIsFolded] = useState(true);
     return <header className="header">
                 <nav className="nav">
@@ -17,7 +19,16 @@ const Header = () => {
                             <li className="nav__item"><Link className='item__link' to="/desserts">Десерты</Link></li>
                             <li className="nav__item"><Link className='item__link' to="/articles">Статьи</Link></li>
                             <li className="nav__item"><Link className='item__link' to="/about">О нас</Link></li>
+                            {!token ? 
                             <li className="nav__item"><Link className='item__link' to="/login">Войти</Link></li>
+                            :
+                            <li className="nav__item"><Link className='item__link' to="/profile"> Профиль</Link></li>
+                            }
+                            <li className="nav__item">
+                            <Badge color="secondary" variant="dot">
+                                <MailIcon />
+                            </Badge>
+                            </li>
                         </ul>
                     </div>
                 </nav>

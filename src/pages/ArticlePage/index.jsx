@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 const ArticlePage = () => {
     const {id} = useParams();
-    const ARTICLES_URL = ('http://127.0.0.1:8000/api/articles/' + id)
+    const ARTICLES_URL = ("http://rickrockk.pythonanywhere.com/api/articles/" + id)
     const [article, setArticle] = useState({});
     const [fetchError, setFetchError] = useState(null)
 

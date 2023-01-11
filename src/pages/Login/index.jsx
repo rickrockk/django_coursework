@@ -2,9 +2,9 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
-const LOGIN_URL = 'http://127.0.0.1:8000/api/auth/login/';
+const LOGIN_URL = 'http://rickrockk.pythonanywhere.com/api/auth/login/';
 
-const Login = () => {
+const Login = ({ setToken }) => {
     const emailRef = useRef()
     const errRef = useRef()
 
@@ -32,7 +32,7 @@ const Login = () => {
             body: JSON.stringify({email, password})
         });
         const content = await response.json()
-
+        setToken(content)
         console.log(content);
     }
     return <main className="main">

@@ -225,12 +225,24 @@ a {
                 margin-top: 1em;
             }
         }
-    }
+    }  
 
+
+    .recipe__ratings {
+        display: flex;
+        justify-content: space-between;
+    }
     .main__recipes-page {
         background-color: #20150F;
         padding: 2em 0;
         .recipes-page__container {
+
+            .recipes__heading {
+                display: flex;
+                justify-content: space-between;
+        
+            }
+
             .recipes-page__header {
                 color: #DFA583;
             }
@@ -240,6 +252,7 @@ a {
             }
         }
     }
+
 
     .main__profile {
         background-color: #20150F;
@@ -253,6 +266,11 @@ a {
                 .profile__photo {
                     width: 50%;
                     justify-self: center;
+                }
+
+                .profile__heading {
+                    display: flex;
+                    justify-content: space-between;
                 }
 
                 .profile__description {
@@ -314,9 +332,7 @@ a {
                         }
                     }
 
-                    .article__name {
-                        
-                    }
+                    
 
                     .article__description {
                         margin-top: 1em;
@@ -382,6 +398,10 @@ a {
                 display: grid;
                 gap: 1.25em;
                 grid-template-columns: 1fr;
+            }
+
+            .about__link {
+                color: white;
             }
         }
     }
