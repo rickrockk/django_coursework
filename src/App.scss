@@ -240,7 +240,15 @@ a {
             .recipes__heading {
                 display: flex;
                 justify-content: space-between;
-        
+            }
+
+            .recipes__tools {
+                display: flex;
+                align-items: center;
+            }
+
+            .recipes__sort-btn {
+                margin-left: 1em;
             }
 
             .recipes-page__header {

@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { styled } from '@mui/system';
 import TextField from '@mui/material/TextField';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Fab from '@mui/material/Fab';
+import SortIcon from '@mui/icons-material/Sort';
 
 const searchTheme = createTheme({
     palette: {
@@ -26,19 +28,22 @@ const RecipesCath = ({cathegory, recipeItems, count}) => {
                 <h2 className="recipes-page__header">
                     {cathegory}
                 </h2>
-                {/* <ThemeProvider theme={searchTheme}> */}
-                    <TextField sx={{
-                        "& .MuiInputBase-root": {
-                             color: 'white'
-                            },
-                        "& .MuiFormLabel-root": {
-                            color: 'white'
-                            },
-                        "& .MuiFormLabel-root.Mui-focused": {
-                            color: 'white'
-                            }
-                        }} label="Поиск" color="secondary"/>
-                {/* </ThemeProvider> */}
+                <div className="recipes__tools">
+                        <TextField sx={{
+                            "& .MuiInputBase-root": {
+                                color: 'white'
+                                },
+                            "& .MuiFormLabel-root": {
+                                color: 'white'
+                                },
+                            "& .MuiFormLabel-root.Mui-focused": {
+                                color: 'white'
+                                }
+                            }} label="Поиск" color="secondary"/>
+                        <span className="recipes__sort-btn">
+                            <Fab size="small" aria-label="sort">  <SortIcon /> </Fab>
+                        </span>
+                </div>
             </div>
             <p className="recipes__count"> Количество: {count}</p>
             <ul className="recipes-page__list">
