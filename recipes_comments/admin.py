@@ -1,7 +1,8 @@
 from django.contrib import admin
 from recipes_comments.models import RecipeComment
+from import_export.admin import ImportExportMixin
 
-class RecipeCommentAdmin(admin.ModelAdmin):
+class RecipeCommentAdmin(ImportExportMixin, admin.ModelAdmin):
     list_display = ('recipe_id', 'author', 'text')
     list_display_links = ('recipe_id', )
     list_filter = ('recipe_id', 'author')

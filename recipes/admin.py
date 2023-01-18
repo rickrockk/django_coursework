@@ -1,7 +1,8 @@
 from django.contrib import admin
 from recipes.models import Recipe
+from import_export.admin import ImportExportMixin
 
-class RecipeAdmin(admin.ModelAdmin):
+class RecipeAdmin(ImportExportMixin, admin.ModelAdmin):
     list_display = ('id', 'name')
     list_display_links = ('id', 'name')
     search_fields = ('id', 'name')

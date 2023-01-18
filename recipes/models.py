@@ -3,6 +3,7 @@ from foodTypes.models import FoodType
 from recipeTypes.models import RecipeType
 from ingredients.models import Ingredient
 from authentification.models import User
+from simple_history.models import HistoricalRecords
 
 class Recipe(models.Model):
     name = models.CharField(verbose_name='Имя рецепта', max_length=255)
@@ -12,6 +13,7 @@ class Recipe(models.Model):
     description = models.TextField(verbose_name='Описание')
     ingredients = models.ManyToManyField(verbose_name='Ингредиенты', to=Ingredient, related_name='recipes')
     cooking = models.TextField(verbose_name='Готовка')
+    history = HistoricalRecords()
 
     def __str__(self):
         return self.name

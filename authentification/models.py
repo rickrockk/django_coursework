@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
+from simple_history.models import HistoricalRecords
 
 from authentification.managers import UserManager
 
@@ -8,6 +9,7 @@ class User(AbstractBaseUser,PermissionsMixin):
     nickname = models.CharField(verbose_name='Никнейм', max_length=255)
     photo = models.ImageField(verbose_name='Фото', upload_to='users/photos')
     bio = models.TextField(verbose_name='Биография')
+    history = HistoricalRecords()
 
     is_active = models.BooleanField(verbose_name='Активирован', default=False)
     is_staff = models.BooleanField(verbose_name='Модерация', default=False)
