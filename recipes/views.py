@@ -5,13 +5,15 @@ from recipes.models import Recipe, FavouriteRecipe
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
+from rest_framework.filters import SearchFilter
+from django_filters.rest_framework import DjangoFilterBackend
 from django.db.models import Q
 
 class RecipeViewSet(ModelViewSet):
     queryset = Recipe.objects.all()
-    search_filters = ['name']
     serializer_class = RecipeSerializer
-    filterset_fields = ['recipe_type', 'food_type']
+    filter_backends = (DjangoFilterBackend, SearchFilter)
+    search_fields = ('id', 'name')
     
 
     @action(methods=['POST'], detail=True, permission_classes=[IsAuthenticated], url_path='add-favourite')
